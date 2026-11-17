@@ -1,0 +1,19 @@
+{
+  "name": "@blog-helper/shared",
+  "description": "서버(에이전트)와 확장이 주고받는 메시지 타입",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "compile": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@blog-helper/se-model": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

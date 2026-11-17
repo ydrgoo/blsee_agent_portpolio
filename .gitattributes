@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# 공개 저장소로 내보낼 때(scripts/publish.sh, git archive) 빠지는 것
+/test-data export-ignore

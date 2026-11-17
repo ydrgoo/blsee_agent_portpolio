@@ -1,0 +1,21 @@
+name: deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            cd ~/blsee_agent && git pull && npm install -w @blog-helper/server --include=dev && sudo systemctl restart blsee
+            for i in $(seq 1 20); do
+              curl -fsS http://localhost:8787/api/health > /dev/null && { echo "서버 응답 확인"; exit 0; }
+              sleep 2
+            done
+            journalctl -u blsee -n 40 --no-pager
+            exit 1

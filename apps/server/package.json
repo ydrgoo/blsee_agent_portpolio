@@ -1,0 +1,39 @@
+{
+  "name": "@blog-helper/server",
+  "description": "블씨(blsee) API 서버: LangChain 에이전트",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "start": "tsx --env-file-if-exists=.env src/index.ts",
+    "compile": "tsc --noEmit",
+    "key": "tsx src/key-cli.ts",
+    "test": "tsx --test src/agent/*.test.ts"
+  },
+  "dependencies": {
+    "@blog-helper/se-model": "*",
+    "@blog-helper/shared": "*",
+    "@google/genai": "^2.28.0",
+    "@hono/node-server": "^2.1.4",
+    "@langchain/core": "^1.2.17",
+    "@langchain/google-genai": "^2.3.2",
+    "@langchain/langgraph": "^1.4.21",
+    "@langchain/perplexity": "^0.3.0",
+    "@perplexity-ai/perplexity_ai": "^0.41.0",
+    "domhandler": "^6.0.1",
+    "hono": "^4.13.13",
+    "htmlparser2": "^10.1.0",
+    "langchain": "^1.5.16",
+    "mathjax-full": "^3.2.2",
+    "smol-toml": "^1.9.1",
+    "ws": "^8.22.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.6.0"
+  }
+}

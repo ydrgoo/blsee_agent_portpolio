@@ -1,0 +1,30 @@
+{
+  "name": "@blog-helper/extension",
+  "description": "블씨(blsee): 네이버 블로그 글쓰기 도우미",
+  "private": true,
+  "version": "0.1.2",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "compile": "tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "@blog-helper/se-model": "*",
+    "@blog-helper/shared": "*",
+    "mathjax-full": "^3.2.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@wxt-dev/module-react": "^1.1.0",
+    "typescript": "^5.6.0",
+    "wxt": "^0.20.0"
+  }
+}

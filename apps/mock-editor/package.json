@@ -1,0 +1,18 @@
+{
+  "name": "@blog-helper/mock-editor",
+  "description": "확장 시험용 모의 스마트에디터 (개발 전용)",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5179 --strictPort",
+    "compile": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@blog-helper/se-model": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vite": "*"
+  }
+}

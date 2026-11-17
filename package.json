@@ -1,0 +1,19 @@
+{
+  "name": "blog-helper-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w @blog-helper/server",
+    "dev:ext": "npm run dev -w @blog-helper/extension",
+    "build": "npm run build -w @blog-helper/extension",
+    "compile": "npm run compile --workspaces --if-present",
+    "key": "npm run key -w @blog-helper/server --",
+    "zip:ext": "rm -f apps/extension/.output/*-chrome.zip && npm run zip -w @blog-helper/extension && open apps/extension/.output"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@blog-helper/se-model",
+  "description": "스마트에디터 ONE 문서 모델과 편집 연산 (브라우저/서버 공용)",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "compile": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

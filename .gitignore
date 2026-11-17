@@ -1,0 +1,15 @@
+node_modules
+.output
+.wxt
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+apps/server/keys.json
+apps/server/keys.json.tmp
+apps/server/downloads
+scripts/.publish-deny
+portfolio/.key
+apps/mock-editor/.e2e-out
+apps/mock-editor/.e2e-profile
